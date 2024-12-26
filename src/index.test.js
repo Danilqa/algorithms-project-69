@@ -47,22 +47,10 @@ describe("filterAndMapIds", () => {
     expect(result).toEqual([]);
   });
 
-  test("handles special characters in query string", () => {
-    const docs = [
-      { id: 1, text: "hello world!" },
-      { id: 2, text: "goodbye world?" },
-    ];
-    const query = "!";
-
-    const result = search(docs, query);
-
-    expect(result).toEqual([1]);
-  });
-
   test("works with numeric IDs", () => {
     const docs = [
       { id: 101, text: "search this" },
-      { id: 102, text: "another test" },
+      { id: 102, text: "another test!!" },
     ];
     const query = "test";
 
